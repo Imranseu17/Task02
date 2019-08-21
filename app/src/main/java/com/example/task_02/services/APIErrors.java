@@ -1,4 +1,4 @@
-package com.example.task_02;
+package com.example.task_02.services;
 
 import org.json.JSONArray;
 import org.json.JSONObject;

@@ -1,9 +1,12 @@
-package com.example.task_02;
+package com.example.task_02.presenter;
 
 import com.example.task_02.Models.Data;
+import com.example.task_02.Models.User;
 import com.example.task_02.services.APIClient;
+import com.example.task_02.services.APIErrors;
 import com.example.task_02.utils.ErrorCode;
 import com.example.task_02.utils.UserStatus;
+import com.example.task_02.view.UserView;
 
 import java.io.IOException;
 import java.net.SocketTimeoutException;
@@ -29,7 +32,7 @@ public class UserPresenter {
 
     public void getUsers() {
 
-        mApiClient.getAPI()
+        mApiClient.getClient()
                 .getUsers()
                 .enqueue(new Callback<Data>() {
                     @Override
@@ -67,6 +70,10 @@ public class UserPresenter {
                     }
                 });
     }
+
+
+
+
 
     private void getErrorMessage(int code, ResponseBody responseBody) {
         ErrorCode errorCode = ErrorCode.getByCode(code);
