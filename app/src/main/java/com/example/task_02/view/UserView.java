@@ -1,4 +1,4 @@
-package com.example.task_02;
+package com.example.task_02.view;
 
 import com.example.task_02.Models.Data;
 
