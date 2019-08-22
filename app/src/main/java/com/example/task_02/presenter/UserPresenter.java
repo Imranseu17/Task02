@@ -1,6 +1,7 @@
 package com.example.task_02.presenter;
 
 import com.example.task_02.Models.Data;
+import com.example.task_02.Models.User;
 import com.example.task_02.services.APIClient;
 import com.example.task_02.services.APIErrors;
 import com.example.task_02.utils.ErrorCode;
@@ -69,6 +70,10 @@ public class UserPresenter {
                     }
                 });
     }
+
+
+
+
 
     private void getErrorMessage(int code, ResponseBody responseBody) {
         ErrorCode errorCode = ErrorCode.getByCode(code);
